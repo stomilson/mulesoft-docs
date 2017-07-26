@@ -25,6 +25,34 @@ This version provides access to Anypoint Platform > Design Center, and Mule 4
 
 * While an array of objects is returned for a set of operations, metadata shows the response as an object.
 
+== Version 7.5.2 - July 25, 2017
+
+=== Compatibility
+
+[%header%autowidth.spread]
+|===
+|Software |Version
+|Mule Runtime|3.5
+|API|SuiteTalk 2017.1 preview
+|===
+
+[NOTE]
+The *NetSuite* version is *not* the same as the *SuiteTalk API* version. Your account may be running on a version of NetSuite different to the version of the the API you are using.
+
+=== Features
+
+None.
+
+=== Fixed in this Release
+
+* *add-record with recordType=ITEM_FULFILLMENT*. In version 7.5.1 when trying to use add-record with recordType=ITEM_FULFILLMENT and item fulfillment record included _package_, the connector throwed a _java.lang.NoSuchFieldException: package_. Currently, it's working as expected.
+
+* *connector doesn't parse CustomFieldList*. In former versions the connector didn't parse CustomFieldList, so it wasn't included into the SOAP request to _Netsuite_, when the name was different than _customFieldList_. Now it works as expected.
+
+=== Known Issues
+
+None.
+
 
 == Version 7.5.1 - July 6, 2017
 
